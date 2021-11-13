@@ -1,0 +1,64 @@
+.container {
+    display:grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-auto-rows: 100px 300px;
+    grid-gap: 10px;
+    height: 100%;
+    position: relative;
+  }
+  .images-item {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  .images-item .image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .images-item .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    cursor:pointer;
+    transition: .5s ease-in-out;
+  }
+  
+  .images-item:hover .image img {
+    transform:scale(1.5);
+  }
+  
+  .images-item .text {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+    pointer-events: none;
+    z-index: 4;
+    transition: .3s ease-in-out;
+  }
+  
+  .images-item:hover .text {
+    opacity: 1;
+    animation: downAnimation .3s linear;
+    padding: 1em;
+    width: 100%;
+  }
+  
+  @keyframes downAnimation{
+    0%{
+      top:10%;
+    }
+    50%{
+      top:35%;
+    }
+    100%{
+      top:50%;
+    }
+  }
