@@ -1,10 +1,9 @@
 import React from 'react';
+import { Master } from './Components/Master';
 import './Css/App.css';
 
-const App = function App() {
+export default function App() {
   return (
-    <div className="App"><p>Hello world!</p></div>
+    <div className="App"><Master /></div>
   );
-};
-
-export default App;
+}
