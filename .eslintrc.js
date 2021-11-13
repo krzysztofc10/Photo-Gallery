@@ -18,5 +18,7 @@ module.exports = {
     'react',
   ],
   rules: {
+    'import/prefer-default-export': 0,
+    'react/function-component-definition': 0,
   },
 };
