@@ -29,7 +29,7 @@ function Master() {
         </div>
       ))}
       {images.fetching && (
-      <div className="text-center bg-secondary m-auto p-3">
+      <div>
         <h1>Loading images...</h1>
       </div>
       )}
