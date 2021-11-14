@@ -4,3 +4,12 @@ body {
     padding:0;
     background-color: #E8CEBF;
   }
+
+.title {
+  height: 40px;
+  background-color: #34568B;
+  margin-bottom: 10px;
+  width: 100%;
+  font-size: 33px;
+  font-family: 'Brush Script MT', cursive;
+}

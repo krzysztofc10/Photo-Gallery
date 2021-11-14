@@ -1,0 +1,39 @@
+.button {
+    width: 60%;
+    line-height: -150%;
+    height: 5%;
+    color: white;
+    font-size: 28px;
+    position: fixed;
+    margin-left: -30.5%;
+    margin-top: 41%;
+    background-color: #955251;
+    text-decoration: none;
+    font-family: 'Brush Script MT', cursive;
+    border: none;
+  }
+
+.detailImage {
+    width: 60%;
+    height: 80%;
+    position: fixed;
+    margin-left: -30.5%;
+  }
+
+  @media screen and (max-width:1400px) {
+    .detailImage {
+        height: auto;
+      }
+      .button {
+        margin-top: 45%;
+      }
+  }
+  
+  @media screen and (max-width:720px) {
+    .detailImage {
+        height: auto;
+      }
+      .button {
+        margin-top: 45%;
+      }
+  }
