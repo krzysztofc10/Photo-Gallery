@@ -6,7 +6,8 @@ import './Css/App.css';
 
 function App() {
   return (
-    <div>
+    <>
+      <div className="title">Photo Galery</div>
       <Grid container spacing={2}>
         <Grid item xs={4} className="gridCss">
           <Master />
@@ -15,7 +16,7 @@ function App() {
           <Detail />
         </Grid>
       </Grid>
-    </div>
+    </>
   );
 }
 
