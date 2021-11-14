@@ -1,14 +1,17 @@
-import React, { useReducer } from 'react';
+import React, { useReducer, useRef } from 'react';
 import { imageReducer } from '../Reducers/imageReducer';
 import { pageReducer } from '../Reducers/pageReducer';
-import { useFetch } from '../Hooks/CustomHooks';
+import { useFetch, useInfiniteScroll } from '../Hooks/CustomHooks';
 import '../Css/Master.css';
 
 function Master() {
   const [images, imageDispatch] = useReducer(imageReducer, { images: [], fetching: true });
-  const [pager] = useReducer(pageReducer, { page: 0 });
+  const [page, pageDispatch] = useReducer(pageReducer, { page: 0 });
 
-  useFetch(pager, imageDispatch);
+  const imagesLoaderRef = useRef(null);
+
+  useFetch(page, imageDispatch);
+  useInfiniteScroll(imagesLoaderRef, pageDispatch);
 
   return (
     <div className="container">
@@ -25,6 +28,12 @@ function Master() {
           </div>
         </div>
       ))}
+      {images.fetching && (
+      <div className="text-center bg-secondary m-auto p-3">
+        <h1>Loading images...</h1>
+      </div>
+      )}
+      <div ref={imagesLoaderRef} />
     </div>
   );
 }
