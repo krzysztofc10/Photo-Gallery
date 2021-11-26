@@ -1,4 +1,4 @@
-## recruitment_task
+## Photo Gallery
 ### Requirements
 The only requirement is to have Node.js installed in your computer.
 ### Install dependencies
